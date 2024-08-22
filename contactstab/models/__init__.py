@@ -1,0 +1,1 @@
+from . import add_fields_in_contact_tab

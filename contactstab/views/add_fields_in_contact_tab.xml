@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <!-- Inherit and update the res.partner form view -->
+        <record id="view_partner_form_inherit_to_add_fields" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <!-- Find the location to insert the new field -->
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="topic_of_interest_wf" />
+                    <field name="service_interest" widget="many2many_tags"/>
+                    
+                </xpath>
+                <xpath expr="//field[@name='category_id']" position="after">
+                 
+                    <field name="software_interest" widget="many2many_tags"/>
+                    <field name="lead_source"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

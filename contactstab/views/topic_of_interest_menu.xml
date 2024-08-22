@@ -1,0 +1,15 @@
+<odoo>
+    <!-- Define the action for the Topic of Interests menu -->
+    <record id="action_topic_of_interest" model="ir.actions.act_window">
+        <field name="name">Topic of Interests</field>
+        <field name="res_model">topic.of.interest</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Add Topic of Interests menu under the Configuration menu -->
+    <menuitem id="menu_topic_of_interest"
+              name="Topic of Interests"
+              parent="contacts.res_partner_menu_config"
+              action="action_topic_of_interest"
+              sequence="20"/>
+</odoo>
